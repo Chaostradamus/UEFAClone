@@ -15,17 +15,7 @@ export default function TabOneScreen({
   return (
     <SafeAreaView style={styles.container}>
       <Field />
-      <Pressable
-        onPress={viewPlayers}
-        style={{
-          backgroundColor: "orange",
-          width: "90%",
-          margin: 20,
-          padding: 10,
-          alignItems: "center",
-          borderRadius: 50,
-        }}
-      >
+      <Pressable onPress={viewPlayers} style={styles.buttonContainer}>
         <Text> View players</Text>
       </Pressable>
     </SafeAreaView>
@@ -37,6 +27,15 @@ const styles = StyleSheet.create({
     top: 50,
     flex: 1,
     alignItems: "center",
+  },
+  buttonContainer: {
+    backgroundColor: "orange",
+    width: "90%",
+    margin: 20,
+    padding: 10,
+    alignItems: "center",
+    borderRadius: 50,
+    marginTop: "auto",
   },
   title: {
     fontSize: 20,
